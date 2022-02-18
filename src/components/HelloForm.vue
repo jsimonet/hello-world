@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: 'HelloForm',
   data: function() {
@@ -15,8 +16,10 @@ export default {
     };
   },
   methods: {
+      ...mapMutations(["setPseudo"]),
       savePseudo() {
           console.error("saving pseudo into store", this.pseudo);
+          this.setPseudo(this.pseudo);
       }
   }
 }

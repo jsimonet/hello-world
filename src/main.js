@@ -8,11 +8,12 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    pseudo: ""
   },
   mutations: {
-    increment (state) {
-      state.count++
+    setPseudo (state, pseudo) {
+      console.error("setting pseudo", pseudo)
+      state.pseudo = pseudo
     }
   }
 });
